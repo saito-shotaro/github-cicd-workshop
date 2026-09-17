@@ -5,5 +5,10 @@ export function formatAvailability(capacity, attendees) {
     return '満席'
   }
 
+  // ここに追加
+  if (remainingSeats <= 3) {
+    return `残席わずか（残り ${remainingSeats} 席）`
+  }
+
   return `残り ${remainingSeats} 席`
 }
